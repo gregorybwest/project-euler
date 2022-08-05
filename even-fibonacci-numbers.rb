@@ -6,14 +6,14 @@
 
 def even_fibonacci(num)
   array = [1, 2]
-  even_fibs = [2]
+  even_fib_sum = 2
   while array[-1] <= num
     array << array[-1] + array[-2]
     if array[-1].even?
-      even_fibs << array[-1]
+      even_fib_sum += array[-1]
     end
   end
-  even_fibs.reduce(:+)
+  even_fib_sum
 end
 
 p even_fibonacci(4000000)
